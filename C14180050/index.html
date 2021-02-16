@@ -11,8 +11,11 @@
         <h1>C14180050 - Tania Sunyoto</h1>
 
         <div class="row">
+            <p>Date 1</p>
             <input type="date" id="date1">
-            <button class="btn btn-primary" onclick="calculate()">Difference From Today</button>
+            <p>Date 2</p>
+            <input type="date" id="date2">
+            <button class="btn btn-primary" onclick="calculate()">Difference Days</button>
 
             <br>
             <div id="result"></div>
@@ -25,10 +28,10 @@
 
     <script>
         function calculate() {
-            var datepick = new Date(document.getElementById("date1").value);
-            var datenow = new Date(Date.now());
+            var date1 = new Date(document.getElementById("date1").value);
+            var date2 = new Date(document.getElementById("date2").value);
 
-            var Difference_In_Time = datepick.getTime() - datenow.getTime();
+            var Difference_In_Time = date2.getTime() - date1.getTime();
             var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
             document.getElementById("result").innerHTML = Difference_In_Days;
