@@ -33,6 +33,11 @@
             <div id="result"></div>
         </div>
 
+        <button class="btn btn-info" id="btncolorRed" onclick="toRed()">To Red</button>
+        <button class="btn btn-info" id="btncolorBlue" onclick="toBlue()">To Blue</button> <br><br>
+
+        <div id="color"> This Will Change Color </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
@@ -47,6 +52,12 @@
             var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
             document.getElementById("result").innerHTML = Difference_In_Days;
+        }
+        function toRed() {
+            document.getElementById("color").style.backgroundColor = "red";
+        }
+        function toBlue() {
+            document.getElementById("color").style.backgroundColor = "blue";
         }
     </script>
 
